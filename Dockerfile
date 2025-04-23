@@ -1,7 +1,4 @@
-FROM nginx:alpine
-
-# Agrega el modulo de seguridad para los links.
-RUN apk add --no-cache nginx-mod-http-secure-link
+FROM nginx:1.27-alpine-slim
 
 # Borra la conf default
 RUN rm -f /etc/nginx/conf.d/default.conf
